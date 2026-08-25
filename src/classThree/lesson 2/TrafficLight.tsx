@@ -3,7 +3,7 @@ import { useState } from "react";
 function Semaforo() {
     const [color, setColor] = useState("red");
 
-    const ChangeColor = () => {
+    const cambiarColor = () => {
         if (color === "red") {
             setColor("yellow");
         } else if (color === "green") {
@@ -15,7 +15,7 @@ function Semaforo() {
 
     return (
         <div>
-            <button type="button" onClick={ChangeColor} style={{ marginTop: "15px", padding: "10px 20px", cursor: "pointer" }}>
+            <button type="button" onClick={cambiarColor} style={{ marginTop: "15px", padding: "10px 20px", cursor: "pointer", backgroundColor:color }}>
                 <p>{color}</p>
             </button>
         </div>
