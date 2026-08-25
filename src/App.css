@@ -35,3 +35,36 @@
     outline-offset: 2px;
   }
 }
+
+.red {
+  font-size: 16px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: red solid;
+  background: red solid;
+  border: 2px solid transparent;
+  transition: border-color 0.3s;
+  margin-bottom: 24px;
+}
+
+.green {
+  font-size: 16px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: green solid;
+  background: green solid;
+  border: 2px solid transparent;
+  transition: border-color 0.3s;
+  margin-bottom: 24px;
+}
+
+.yellow {
+  font-size: 16px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: yellow solid;
+  background: yellow solid;
+  border: 2px solid transparent;
+  transition: border-color 0.3s;
+  margin-bottom: 24px;
+}
