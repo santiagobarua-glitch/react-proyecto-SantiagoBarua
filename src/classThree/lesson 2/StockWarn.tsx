@@ -2,7 +2,7 @@ import { useState } from "react";
 
 function StockWarn() {
     const [count, setCount] = useState(0);
-    const message = count >= 1 ? 'disponible' : 'no hay unidades'
+    const message = count < 1 ? 'sin stock' : count >= 1 && count <= 5 ? 'ultimas unidades' : 'hay stock';
 
     return (
         <div>
