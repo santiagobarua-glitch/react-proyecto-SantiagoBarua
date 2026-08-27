@@ -1,5 +1,5 @@
 import './App.css'
-import Content from './classThree/lesson 2/ContentClass3Lesson2'
+import Content from './classThree/lesson-3/ContentClass3Lesson3'
 
 function App() {
 
