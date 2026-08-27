@@ -11,8 +11,12 @@ function SubcriptionForm() {
     return enviado ? <p>Suscripcion exitosa</p> : (
         <form onSubmit={handleSubmit}>
             <input type="email" name="email" required />
+            <label>
+                <input type="checkbox" name="terms" required />
+                Acepto los términos y condiciones
+            </label>
             <button type="submit">Enviar</button>
-        </form>
+        </form> 
     )
 }
 
