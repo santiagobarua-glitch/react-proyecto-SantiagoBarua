@@ -17,7 +17,7 @@ function NameList() {
         setNewName("")
     }
 
-    const handleDeleteName = (idToDelete) => {
+    const handleDeleteName = (idToDelete: number) => {
         const filteredNames = names.filter(item => item.id !== idToDelete)
         setNames(filteredNames)
     }
