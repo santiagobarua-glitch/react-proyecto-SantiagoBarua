@@ -1,18 +1,18 @@
 import { ContadorProvider } from "./ContextCount"
 import Contador from "./Contador"
 import { TemaProvider } from "./ContextTema"
-import Fondo from "./TemaFondo"
+import TemaFondo from "./TemaFondo"
 
 function Page() {
 
     return (
         <div>
             <TemaProvider>
-                <Fondo>
+                <TemaFondo>
                     <ContadorProvider>
                         <Contador />
                     </ContadorProvider>
-                </Fondo>
+                </TemaFondo>
             </TemaProvider>
         </div>
     )

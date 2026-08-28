@@ -1,7 +1,7 @@
 import { useTema } from "./ContextTema"
-import { ReactNode } from "react"
+import { type ReactNode } from "react"
 
-function Fondo({ children }: { children: ReactNode }) {
+function TemaFondo({ children }: { children: ReactNode }) {
 
     const { tema, cambiarTema } = useTema()
 
@@ -19,4 +19,4 @@ function Fondo({ children }: { children: ReactNode }) {
     )
 }
 
-export default Fondo
+export default TemaFondo
