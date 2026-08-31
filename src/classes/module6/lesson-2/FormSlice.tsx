@@ -17,7 +17,7 @@ export const useAuthStore = create<AuthState>()(
             name: '',
             password: '',
             estaLogueado: false,
-            register: (name: string, password: string) => set({ name, password, estaLogueado: true }),
+            register: (name, password) => set({ name, password, estaLogueado: true }),
             logout: () => {
                 set({ name: '', password: '', estaLogueado: false })
                 localStorage.removeItem(CLAVE_STORAGE)
