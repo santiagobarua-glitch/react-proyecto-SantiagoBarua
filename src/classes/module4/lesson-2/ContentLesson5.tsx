@@ -1,6 +1,6 @@
 import SubcriptionForm from "./SubscriptionForm"
 
-function Content() {
+function ContentEj2() {
     return (
         <>
             <SubcriptionForm/>
@@ -8,4 +8,4 @@ function Content() {
     )
 }
 
-export default Content
+export {ContentEj2}
