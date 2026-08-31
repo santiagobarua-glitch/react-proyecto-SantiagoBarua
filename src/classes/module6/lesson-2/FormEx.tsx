@@ -1,26 +1,47 @@
-import { useFormStore } from "./FormSlice"
+import { useState, type FormEvent } from "react"
+import { useAuthStore } from "./FormSlice"
 
 function Form() {
-    const inputName = useFormStore((state) => state.inputName)
-    const inputValue = useFormStore((state) => state.inputValue)
-    const form = useFormStore((state) => state.form)
-    const name = useFormStore((state) => state.name)
+  const [name, setName] = useState('')
+  const [password, setPassword] = useState('')
+  
+  const estaLogueado = useAuthStore((state) => state.estaLogueado)
+  const nombreGuardado = useAuthStore((state) => state.name)
+  const register = useAuthStore((state) => state.register)
+  const logout = useAuthStore((state) => state.logout)
 
-    return (
+  function handleSubmit(e: FormEvent) {
+    e.preventDefault()
+    if (name.trim() === '' || password.trim() === '') {
+      return
+    }
+    register(name, password)
+  }
+
+  return (
+    <div>
+      {estaLogueado ? (
         <div>
-            <form onClick={(e) => e.preventDefault()}>
-                <input 
-                    value={inputValue} 
-                    onChange={(e) => inputName(e.target.value)} 
-                    placeholder="Escribe tu nombre"
-                />
-                <button onClick={form}>guardar</button>
-            </form>
-            <div>
-                <span>bienvenido {name}</span>
-            </div>
+          <span>Bienvenido, {nombreGuardado}</span>
+          <button onClick={logout}>Cerrar sesión</button>
         </div>
-    )
+      ) : (
+        <form onSubmit={handleSubmit}>
+          <input 
+            value={name} 
+            onChange={(e) => setName(e.target.value)} 
+            placeholder="Escribe tu nombre" 
+          />
+          <input 
+            value={password} 
+            onChange={(e) => setPassword(e.target.value)} 
+            placeholder="Escribe tu contraseña" 
+          />
+          <button type="submit">Guardar</button>
+        </form>
+      )}
+    </div>
+  )
 }
 
 export default Form

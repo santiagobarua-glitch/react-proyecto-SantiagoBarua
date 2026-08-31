@@ -1,15 +1,28 @@
 import { create } from 'zustand'
+import { persist } from 'zustand/middleware';
 
-interface FormState {
-    name: string;        
-    inputValue: string; 
-    inputName: (value: string) => void;
-    form: () => void;
+const CLAVE_STORAGE = 'm6-c3-e4-auth';
+
+interface AuthState {
+    name: string;
+    password: string;
+    estaLogueado: boolean
+    register: (name: string, password: string) => void;
+    logout: () => void;
 }
 
-export const useFormStore = create<FormState>((set) => ({
-    name: '',
-    inputValue: '',
-    inputName: (value) => set({ inputValue: value }),
-    form: () => set((state) => ({ name: state.inputValue.trim() === '' ? 'desconocido' : state.inputValue })),
-}))
+export const useAuthStore = create<AuthState>()(
+    persist(
+        (set) => ({
+            name: '',
+            password: '',
+            estaLogueado: false,
+            register: (name: string, password: string) => set({ name, password, estaLogueado: true }),
+            logout: () => {
+                set({ name: '', password: '', estaLogueado: false })
+                localStorage.removeItem(CLAVE_STORAGE)
+            },
+        }),
+        {name: CLAVE_STORAGE},
+    )
+)
