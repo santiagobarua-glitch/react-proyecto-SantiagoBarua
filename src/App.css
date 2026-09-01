@@ -68,3 +68,10 @@
   transition: border-color 0.3s;
   margin-bottom: 24px;
 }
+
+.oscuro {
+  background-color: rgb(36, 36, 36);
+}
+.claro {
+  background-color: white;
+}
