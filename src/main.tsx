@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 import { Clase1Page } from './pages/Clase1.tsx'
 import { Clase2Page } from './pages/Page2.tsx'
 import { Clase3Page } from './pages/Page3.tsx'
+import { Clase4Page } from './pages/Page4.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -21,7 +22,7 @@ createRoot(document.getElementById('root')!).render(
         <Route path='/ejercicio1' element={< Clase1Page />} />
         <Route path='/ejercicio2' element={< Clase2Page />} />
         <Route path='/ejercicio3' element={< Clase3Page />} />
-        <Route path='/ejercicio3' element={< Clase4Page />} />
+        <Route path='/ejercicio4' element={< Clase4Page />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>,
