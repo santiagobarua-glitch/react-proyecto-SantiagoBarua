@@ -1,6 +1,6 @@
 import LiveGreet from "./LiveGreet"
 
-function Content() {
+function ContentEj1() {
     return (
         <>
             <LiveGreet/>
@@ -8,4 +8,4 @@ function Content() {
     )
 }
 
-export default Content
+export {ContentEj1}

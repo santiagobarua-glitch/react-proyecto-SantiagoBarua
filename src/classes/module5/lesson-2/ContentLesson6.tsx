@@ -1,7 +1,7 @@
 import Page from "./Page"
 
 
-function Content() {
+function ContentEj2() {
     return (
         <>
          <Page/>            
@@ -9,4 +9,4 @@ function Content() {
     )
 }
 
-export default Content
+export {ContentEj2}

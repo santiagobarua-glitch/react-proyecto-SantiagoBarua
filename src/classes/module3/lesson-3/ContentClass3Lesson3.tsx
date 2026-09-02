@@ -1,7 +1,7 @@
 import NameList from "./NameList";
 import TaskList from "./TaskList";
 
-function Content() {
+function ContentEj3() {
     return (
         <>
             <NameList/>
@@ -10,4 +10,4 @@ function Content() {
     )
 }
 
-export default Content
+export {ContentEj3}

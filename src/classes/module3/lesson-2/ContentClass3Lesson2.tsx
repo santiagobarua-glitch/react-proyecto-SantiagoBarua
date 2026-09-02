@@ -2,7 +2,7 @@ import Flashcard from "./FlashcardCount"
 import StockWarn from "./StockWarn"
 import TrafficLight from "./TrafficLight"
 
-function Content() {
+function ContentEj2() {
     return (
         <>
             <TrafficLight/>
@@ -12,4 +12,4 @@ function Content() {
     )
 }
 
-export default Content
+export {ContentEj2}

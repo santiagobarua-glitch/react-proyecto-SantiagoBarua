@@ -19,7 +19,7 @@ function Flashcard({ complete }) {
         marginLeft: "auto",
         marginRight: "auto", 
         width: "100px",
-        height: "150px",
+        height: "50px",
         background: "grey",
         color: "white",
         display: "flex",

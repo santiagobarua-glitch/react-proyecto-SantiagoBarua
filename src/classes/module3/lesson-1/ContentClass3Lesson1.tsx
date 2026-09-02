@@ -1,13 +1,14 @@
 import Contador from "./Contador";
 import Likes from "./Likes";
 
-function Content() {
+function ContentEj1() {
     return (
         <>
             <Contador />
             <Likes />
+
         </>
     )
 }
 
-export default Content
+export default ContentEj1

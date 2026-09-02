@@ -2,7 +2,7 @@ import Contador from "./lesson-1/Contador"
 import Form from "./lesson-2/FormEx"
 
 
-function Content() {
+function ContentDay6() {
     return (
         <>
             <Contador />
@@ -11,4 +11,4 @@ function Content() {
     )
 }
 
-export default Content
+export {ContentDay6}

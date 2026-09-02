@@ -2,7 +2,7 @@ import ClicksCount from "./ClicksCount"
 import RegresiveCount from "./RegresiveCount"
 
 
-function Content() {
+function ContentEj1() {
     return (
         <>
          <ClicksCount/>
@@ -11,4 +11,4 @@ function Content() {
     )
 }
 
-export default Content
+export {ContentEj1}
