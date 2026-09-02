@@ -1,4 +1,4 @@
-import { Counter } from "./lesson2/Counter"
+import { Counter } from "./useRef/lesson1/Counter"
 
 function ContentDay7() {
     return (

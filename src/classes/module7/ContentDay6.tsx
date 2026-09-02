@@ -1,7 +1,8 @@
-import { TarjetaInfo } from "./lesson-1/TarjetaInfo"
-import Contador from "./lesson-2/Contador"
-import TemaFondo from "./lesson-3/TemaFondo"
-import { TemaProvider } from "./lesson-3/Fondo"
+import { TarjetaInfo } from "./Customhooks/lesson-1/TarjetaInfo"
+import Contador from "./Customhooks/lesson-2/Contador"
+import { TemaProvider } from "./Customhooks/lesson-3/Fondo"
+import TemaFondo from "./Customhooks/lesson-3/TemaFondo"
+
 
 function ContentDay6() {
     return (

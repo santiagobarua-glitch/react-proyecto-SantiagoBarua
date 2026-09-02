@@ -1,4 +1,4 @@
-import { ContentDay7 } from "../classes/module8/ContentDay7"
+import { ContentDay7 } from "../classes/module7/ContentDay7"
 
 function Class6Page() {
     return (
